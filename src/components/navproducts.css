@@ -1,0 +1,15 @@
+#nav .navCart span {
+    color: white;
+}
+
+#nav .logoImg {
+    display: inline-block;
+    height: 40px;
+    /* padding-left: 15rem; */
+    
+}
+
+#nav .nav {
+    margin: 0;
+    background-color: #02000a;
+}

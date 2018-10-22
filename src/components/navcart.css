@@ -1,0 +1,9 @@
+#cart .logoImg {
+    display: inline-block;
+    height: 40px;
+}
+
+#cart .nav {
+    margin: 0;
+    padding: 30px;
+}

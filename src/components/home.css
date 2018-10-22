@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans'); 
+
+#home {
+    background-image: url(../static/img/home-bg.jpg);
+    /* height: -moz-available;          
+    height: -webkit-fill-available;  
+    height: fill-available; */
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#home .overlay {
+    /* background-image: linear-gradient(to bottom right, rgba(40, 40, 40, 0.23), rgba(0, 205, 175, 0.23)); */
+    /* background-color: rgba(0, 0, 0, 0.75); */
+    /* background-color: rgba(255, 16, 182, 0.68); */
+    /* height: -moz-available;          
+    height: -webkit-fill-available;  
+    height: fill-available; */
+    /* visibility: hidden; */
+    height: 100vh;
+}
+
+/* #home .logo {
+    position: relative;
+} */
+
+#home .navHome {
+    top: -50px; 
+    position: relative;
+    opacity: 0; 
+}
+
+#home .hItems {
+    /* visibility: hidden; */
+    padding-top: 11rem;
+    position: relative;
+    opacity: 0;
+}
+
+#home .logoText h1, #home .logoText h2 {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#home .dividerHome {
+    width: 55%;
+    margin: 0 auto;
+    color: #df3997;
+}
+
+#home .logoText h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+#home .logoText h2 {
+    letter-spacing: .3rem;
+}
+
+#home .thinTitle {
+    font-weight: 100;
+}
+
+#home .logoText h1, #home .logoText h2 {
+    color: white;
+}

@@ -1,0 +1,37 @@
+@media screen and (max-width: 815px) {
+    #pContainer .pItems {
+        flex: 1 1 calc(100% - 2rem);
+    }
+
+}
+
+@media screen and (min-width: 815px) {
+    #pContainer .pItems {
+        flex: 1 1 calc(50% - 2rem);
+    }
+
+    #nav .navCart {
+        right: -250%;
+        position: relative;
+    }
+
+    #nav .logoImg {
+        right: 30%;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    #pContainer .pItems {
+        flex: 1 1 calc(33% - 2rem);
+    }
+
+    #nav .navCart {
+        right: -450%;
+        position: relative;
+    }
+
+    #nav .logoImg {
+        right: 50%;
+    }
+}
