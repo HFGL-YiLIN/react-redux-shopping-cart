@@ -45,7 +45,7 @@ module.exports = {
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),  
-    new webpack.optimize.CommonsChunkPlugin('common'),
+    // new webpack.optimize.CommonsChunkPlugin('common'),
     new webpack.optimize.UglifyJsPlugin(),
     new webpack.optimize.AggressiveMergingPlugin()
     
