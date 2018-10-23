@@ -89,8 +89,9 @@ module.exports = {
           }
         }), 
         new webpack.optimize.UglifyJsPlugin({
+          mangle: true,
               compress: {
-                warnings: true
+                warnings: false
               }
             })
     
