@@ -10,6 +10,5 @@ import './index.css';
 
 render(
     <Provider store={store}>
-        {/* <Router route={route} history={history} /> */}
         <App />
     </Provider>, document.getElementById('root'));

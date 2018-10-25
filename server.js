@@ -3,14 +3,10 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, 'build')));
-}
+process.env.NODE_ENV === "production"
+? app.use(express.static(path.join(__dirname, 'build')))
+: app.use(express.static(path.join(__dirname, 'public')));
 
-// for local env, use /client/public folder
-else {
-  app.use(express.static(path.join(__dirname, 'public')));
-}
 
 app.get('*', (req, res) => {
   res.sendFile(`${__dirname}/build/index.html`);

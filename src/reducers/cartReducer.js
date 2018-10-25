@@ -1,7 +1,6 @@
-"use strict";
 import {ADD_TO_CART, DELETE_FROM_CART, UPDATE_ITEM_UNITS} from '../actions/cartActions';
 
-export default function cartReducer(state=[], action={}) {
+export default cartReducer = (state=[], action={}) => {
     switch(action.type) {
 
         case ADD_TO_CART:
@@ -18,7 +17,10 @@ export default function cartReducer(state=[], action={}) {
 
         case UPDATE_ITEM_UNITS:
             let updateIndex = findProductIndex(state, action.payload.id);
-            if (state[updateIndex].units === 0 && action.payload.units === -1) {
+            if(state[updateIndex].units === 1) {
+                return [...state.slice(0, updateIndex), ...state.slice(updateIndex + 1)]; 
+            }
+            else if (state[updateIndex].units === 0 && action.payload.units === -1) {
                 break;
             }
             state[updateIndex].units += action.payload.units;
@@ -26,8 +28,8 @@ export default function cartReducer(state=[], action={}) {
 
     }
 
-    function findProductIndex(products, id) {
-        return products.findIndex((p) => p.id === id)
+    function findProductIndex(products, prodId) {
+        return products.findIndex(p => p.id === prodId)
     }
 
     return state;
