@@ -1,6 +1,6 @@
 import {ADD_TO_CART, DELETE_FROM_CART, UPDATE_ITEM_UNITS} from '../actions/cartActions';
 
-export default cartReducer = (state=[], action={}) => {
+export default function cartReducer(state=[], action={}) {
     switch(action.type) {
 
         case ADD_TO_CART:
