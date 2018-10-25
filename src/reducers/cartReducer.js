@@ -1,4 +1,4 @@
-import {ADD_TO_CART, DELETE_FROM_CART, UPDATE_ITEM_UNITS} from '../actions/cartActions';
+import { ADD_TO_CART, DELETE_FROM_CART, UPDATE_ITEM_UNITS } from '../actions/cartActions';
 
 const cartReducer = (state=[], action={}) => {
     switch(action.type) {
