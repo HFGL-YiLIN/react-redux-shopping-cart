@@ -20,10 +20,9 @@ const locationProducts = {
     state: { fromDashboard: true }
 };
 
-// class Cart extends React.Component {
+class Cart extends React.Component {
 
-    const Cart = () => {
-    // render() {
+    render() {
         if (this.props.cart.length !== 0) {
             return (
 
@@ -130,7 +129,7 @@ const locationProducts = {
                 </Menu>
             </div>
         );
-    // }
+    }
 }
 
 // react-redux
