@@ -14,12 +14,12 @@ export default function cartReducer(state=[], action={}) {
 
         case DELETE_FROM_CART:
             let deleteIndex = findProductIndex(state, action.payload.id);
-            return [...state.slice(0, deleteIndex), ...state.slice(deleteIndex+1)];
+            return [...state.slice(0, deleteIndex), ...state.slice(deleteIndex + 1)];
 
         case UPDATE_ITEM_UNITS:
             let updateIndex = findProductIndex(state, action.payload.id);
-            if (state[updateIndex].units === 0 && action.payload.units === -1) {
-                break;
+            if (state[updateIndex].units === 1 && action.payload.units === -1) {
+                return [...state.slice(0, updateIndex), ...state.slice(updateIndex + 1)];
             }
             state[updateIndex].units += action.payload.units;
             return state.concat([]);
