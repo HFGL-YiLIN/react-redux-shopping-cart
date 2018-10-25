@@ -1,7 +1,7 @@
 import React from 'react';
 import image from '../static/img/empty.png';
 
-const CartEmpty = () => {
+export const CartEmpty = () => {
     return (
         <div className='cart'>
             <img src={image} width="164" alt={"empty cart"} />
@@ -9,4 +9,4 @@ const CartEmpty = () => {
     );
 }
 
-export default CartEmpty; 
+// export default CartEmpty; 

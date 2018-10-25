@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux';
 import { deleteFromCart, updateItemUnits } from '../actions/cartActions';
 import CartItem from "./CartItem";
-import CartEmpty from "./CartEmpty";
+import { CartEmpty } from "./CartEmpty";
 import CartFull from "./CartFull";
 import { Menu, Image, Button, Icon } from 'semantic-ui-react';
 
