@@ -1,9 +1,7 @@
-"use strict";
 import React from 'react';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux';
 import { deleteFromCart, updateItemUnits } from '../actions/cartActions';
-import CartItem from "./CartItem";
 import { CartEmpty } from "./CartEmpty";
 import CartFull from "./CartFull";
 import { Menu, Image, Button, Icon } from 'semantic-ui-react';
@@ -22,9 +20,10 @@ const locationProducts = {
     state: { fromDashboard: true }
 };
 
-class Cart extends React.Component {
+// class Cart extends React.Component {
 
-    render() {
+    const Cart = () => {
+    // render() {
         if (this.props.cart.length !== 0) {
             return (
 
@@ -131,7 +130,7 @@ class Cart extends React.Component {
                 </Menu>
             </div>
         );
-    }
+    // }
 }
 
 // react-redux
