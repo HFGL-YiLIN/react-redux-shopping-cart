@@ -1,10 +1,13 @@
 import { ADD_TO_CART, DELETE_FROM_CART, UPDATE_ITEM_UNITS } from '../actions/cartActions';
 
-export const cartReducer = (state=[], action={}) => {
-    switch(action.type) {
+const cartReducer = (state = [], action = {}) => {
+
+    const findProductIndex = (products, productId) => products.findIndex(p => p.id === productId);
+    
+    switch (action.type) {
 
         case ADD_TO_CART:
-            let addIndex = findProductIndex(state, action.payload.id);
+            const addIndex = findProductIndex(state, action.payload.id);
             if (addIndex !== -1) {
                 state[addIndex].units += 1;
                 return state.concat([]);
@@ -12,25 +15,24 @@ export const cartReducer = (state=[], action={}) => {
             return state.concat(action.payload);
 
         case DELETE_FROM_CART:
-            let deleteIndex = findProductIndex(state, action.payload.id);
-            return [...state.slice(0, deleteIndex), ...state.slice(deleteIndex+1)];
+            const deleteIndex = findProductIndex(state, action.payload.id);
+            return [...state.slice(0, deleteIndex), ...state.slice(deleteIndex + 1)];
 
         case UPDATE_ITEM_UNITS:
-            let updateIndex = findProductIndex(state, action.payload.id);
-            if(state[updateIndex].units === 1 && action.payload.units === -1) {
+            const updateIndex = findProductIndex(state, action.payload.id);
+            if(state[updateIndex].units === 1) {
                 return [...state.slice(0, updateIndex), ...state.slice(updateIndex + 1)]; 
             }
-            // else if (state[updateIndex].units === 0 && action.payload.units === -1) {
-            //     break;
-            // }
+
+            if (state[updateIndex].units === 0 && action.payload.units === -1) {
+                break;
+            }
             state[updateIndex].units += action.payload.units;
             return state.concat([]);
 
     }
-
-    function findProductIndex(products, prodId) {
-        return products.findIndex(p => p.id === prodId)
-    }
-
+ 
     return state;
-}; 
+};
+
+export default cartReducer; 

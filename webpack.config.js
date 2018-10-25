@@ -33,7 +33,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/build'),
     publicPath: '/',
-    filename: '[name].js'
+    filename: 'bundle.js'
   },
   devtool: 'cheap-eval-source-map',
   devServer: {
@@ -44,10 +44,6 @@ module.exports = {
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),  
-    // new webpack.optimize.CommonsChunkPlugin('common'),
-    new webpack.optimize.UglifyJsPlugin(),
-    new webpack.optimize.AggressiveMergingPlugin()
-    
+    new webpack.NoEmitOnErrorsPlugin()
   ]
 };

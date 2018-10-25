@@ -1,13 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+// Import all page components here
+import App from '../components/App';
 import Home from '../components/Home';
 import Products from '../components/Products';
 import Cart from '../components/Cart';
 import NoMatch from '../components/NoMatch';
 
 export default (
-
   <Router>
     <Switch>
       <Route exact path="/" component={Home} />
@@ -16,6 +17,5 @@ export default (
       <Route component={NoMatch} />
       <Route path="*" component={Home} />
     </Switch>
-</Router>
-
+  </Router>
 );

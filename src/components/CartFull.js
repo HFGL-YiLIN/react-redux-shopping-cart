@@ -1,8 +1,9 @@
 import React from 'react';
-import { bindActionCreators } from 'redux'
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { deleteFromCart, updateItemUnits } from '../actions/cartActions';
-import CartItem from "./CartItem";
+import CartItem from './CartItem';
+
 import { Table } from 'semantic-ui-react';
 
 const CartTableHeader = () => {

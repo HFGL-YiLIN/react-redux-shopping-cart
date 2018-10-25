@@ -2,11 +2,11 @@ import React from 'react';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux';
 import { deleteFromCart, updateItemUnits } from '../actions/cartActions';
-import { CartEmpty } from "./CartEmpty";
+import CartEmpty from "./CartEmpty";
 import CartFull from "./CartFull";
-import { Menu, Image, Button, Icon } from 'semantic-ui-react';
 
 import { Link } from 'react-router-dom';
+import { Menu, Image, Button, Icon } from 'semantic-ui-react';
 import './cart.css';
 import logo from '../static/img/logo.png';
 
