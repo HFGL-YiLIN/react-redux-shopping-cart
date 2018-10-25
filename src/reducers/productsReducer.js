@@ -20,6 +20,6 @@ const INIT_PRODUCTS = [
     {id:6, title: 'Yojimbo', description: "A crafty ronin comes to a town divided by two criminal gangs and decides to play them against each other to free the town.", price: 49, img: image6}
 ];
 
-export default function productsReducer(state=INIT_PRODUCTS, action={}) {
+export const productsReducer = (state=INIT_PRODUCTS, action={}) => {
     return state;
 }

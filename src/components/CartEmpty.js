@@ -8,5 +8,3 @@ export const CartEmpty = () => {
         </div>
     );
 }
-
-// export default CartEmpty; 
