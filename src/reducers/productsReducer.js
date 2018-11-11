@@ -19,31 +19,8 @@ const INIT_PRODUCTS = [
     {id:5, title: 'Hacksaw Ridge', description: "World War II American Army Medic Desmond T. Doss| who served during the Battle of Okinawa| refuses to kill people| and becomes the first man in American history to receive the Medal of Honor without firing a shot.", price: 69, img: image5},
     {id:6, title: 'Yojimbo', description: "A crafty ronin comes to a town divided by two criminal gangs and decides to play them against each other to free the town.", price: 49, img: image6}
 ];
-export default function productsReducer(state=INIT_PRODUCTS, action={}) {
-    
-    // PLEASE NOTE:
-    // below actions are unused
-    // kept for instance 
-    // switch(action.type) {
-    //     case 'ADD_PRODUCT':
-    //         return state.concat(action.payload);
-
-    //     case 'DELETE_PRODUCT':
-    //         let indexToDel = findProductIndex(state, action.payload.id);
-    //         return [...state.slice(0, indexToDel), ...state.slice(indexToDel+1)];
-
-    //     case 'UPDATE_PRODUCT':
-    //         let indexToUpdate = findProductIndex(state, action.payload.id);
-    //         const newProductExtend = {
-    //             ...state[indexToUpdate], title: action.payload.title
-    //         };
-    //         return [...state.slice(0, indexToUpdate), newProductExtend, ...state.slice(indexToUpdate+1)];
-
-    // }
-
-    // function findProductIndex(products, id) {
-    //     return products.findIndex((p) => p.id === id)
-    // }
+export const productsReducer = (state=INIT_PRODUCTS, action={}) => {
 
     return state;
-}
+    
+}; 

@@ -1,6 +1,6 @@
 import {ADD_TO_CART, DELETE_FROM_CART, UPDATE_ITEM_UNITS} from '../actions/cartActions';
 
-const cartReducer = (state=[], action={}) => {
+export const cartReducer = (state=[], action={}) => {
 
     const findProductIndex = (products, prodId) => products.findIndex(p => p.id === prodId); 
 
@@ -30,5 +30,3 @@ const cartReducer = (state=[], action={}) => {
 
     return state;
 }; 
-
-export default cartReducer; 
